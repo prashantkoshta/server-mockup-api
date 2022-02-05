@@ -1,7 +1,5 @@
 # server-mockup-api
 
-## Description
-
 To get full fake REST API with no efforts. Add/Modify API endpoint and response through JSON file.
 
 ## Installation
