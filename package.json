@@ -1,6 +1,6 @@
 {
-  "name": "@pk/server-mockup-api",
-  "version": "0.0.0-alpha-0",
+  "name": "server-mockup-api",
+  "version": "0.0.0-alpha-1",
   "description": "Purpose to mock rest api response.",
   "main": "./lib/bin.js",
   "private": false,
@@ -12,8 +12,6 @@
     "api-mock",
     "json-server",
     "server-mockup-api",
-    "@pk/server-mockup-api",
-    "@pk",
     "rest-api-mockup",
     "rest-mockup",
     "json-mockup"
@@ -27,7 +25,7 @@
   },
   "scripts": {
     "start": "nodemon src/cli/bin.ts --port=8081 --db=./mock-json/db --routes=./mock-json/routes --delayInResponse=0",
-    "build": "rm -rf dist/ && tsc --sourceMap false && cp package.json ./dist && cp -R mock-json ./dist"
+    "build": "rm -rf dist/ && tsc --sourceMap false && cp package.json ./dist && cp -R mock-json ./dist && cp README.md ./dist"
   },
   "repository": {
     "type": "git",

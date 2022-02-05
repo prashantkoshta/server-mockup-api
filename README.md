@@ -7,13 +7,13 @@ To get full fake REST API with no efforts. Add/Modify API endpoint and response 
 ## Installation
 
 ```bash
-npm i @pk/server-mockup-api
+npm i server-mockup-api
 ```
 
 OR
 
 ```bash
-yarn add @pk/server-mockup-api
+yarn add server-mockup-api
 ```
 
 ## Run server-mockup-api
