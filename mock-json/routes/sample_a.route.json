@@ -1,0 +1,3 @@
+{
+    "/api/sample/a/data/:id\\?version=:versionNumver": "/a_res"
+}
