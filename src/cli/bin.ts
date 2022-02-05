@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import minimist, { ParsedArgs } from "minimist";
 import ServerMockApi from "../server/server-mock-api";
 const argv: ParsedArgs = minimist(process.argv.slice(2));

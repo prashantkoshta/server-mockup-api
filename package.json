@@ -1,8 +1,11 @@
 {
   "name": "server-mockup-api",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Purpose to mock rest api response.",
-  "main": "./lib/bin.js",
+  "main": "./cli/bin.js",
+  "bin": {
+    "server-mockup-api": "cli/bin.js"
+  },
   "private": false,
   "keywords": [
     "json",
@@ -17,7 +20,8 @@
     "json-mockup"
   ],
   "files": [
-    "lib",
+    "cli",
+    "server",
     "mock-json"
   ],
   "engines": {
