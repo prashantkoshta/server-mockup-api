@@ -29,3 +29,6 @@ Where
 - **routes**: Directory path where all api endpoit routes json file saved.
 
 It is extension on top of [JSON-SERVER](https://www.npmjs.com/package/json-server)
+
+
+[![Analytics](https://ga-beacon.appspot.com/G-ZFJEZW08DP/chromeskel_a/readme)](https://www.npmjs.com/package/server-mockup-api)
