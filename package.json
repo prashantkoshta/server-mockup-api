@@ -1,6 +1,6 @@
 {
   "name": "server-mockup-api",
-  "version": "0.0.4",
+  "version": "0.0.0",
   "description": "Purpose to mock rest api response.",
   "main": "./cli/bin.js",
   "bin": {
