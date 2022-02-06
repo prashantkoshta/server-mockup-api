@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export const middleware = (req: any, res: any, next: any) => {
-    if(req.method === 'GET' 
+	if(req.method === 'GET' 
     || req.method === 'POST' 
     || req.method === 'PUT' 
     || req.method === 'DELTE' 
     || req.method === 'PATCH') {
-        req.method = 'GET'
-    }
-    next();
+		req.method = 'GET';
+	}
+	next();
 };
