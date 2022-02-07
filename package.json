@@ -1,6 +1,6 @@
 {
   "name": "server-mockup-api",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "To get full fake REST API with no efforts. Add/Modify API endpoint and response through JSON file.",
   "main": "./cli/bin.js",
   "bin": {
@@ -22,7 +22,8 @@
   "files": [
     "cli",
     "server",
-    "mock-json"
+    "mock-json",
+    "README.md"
   ],
   "engines": {
     "node": ">=8.0.0"

@@ -28,5 +28,8 @@ Where
 
 It is extension on top of [JSON-SERVER](https://www.npmjs.com/package/json-server)
 
+## Demo Application
+
+[server-mockup-api-demo](https://github.com/prashantkoshta/server-mockup-api-demo#readme)
 
 [![Analytics](https://ga-beacon.appspot.com/G-ZFJEZW08DP/chromeskel_a/readme)](https://www.npmjs.com/package/server-mockup-api)
