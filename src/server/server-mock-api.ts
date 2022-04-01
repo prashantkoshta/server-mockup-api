@@ -3,11 +3,13 @@ import JsonServer from 'json-server';
 import { Application } from 'express';
 import Utils from './utils';
 import { middleware } from './middleware';
+import https from 'https';
+import fs from 'fs';
 
 export default class ServerMockApi {
 	private readonly expressApp: Application;
 
-	constructor(readonly port: number, readonly dbPath: string, readonly routePath: string, readonly dealyInResponse?: number) {
+	constructor(readonly port: number, readonly dbPath: string, readonly routePath: string, readonly dealyInResponse?: number, enableHttps?:boolean, certFilePath?:string, keyFilePath?:string) {
 		this.expressApp = JsonServer.create();
 
 		const mergedDBJson:JSON = new Utils().readAllFiles(this.dbPath, JSON.parse('{}'));
@@ -20,10 +22,20 @@ export default class ServerMockApi {
 		});
 		this.expressApp.use(middleware);
 		this.expressApp.use(router);
-
-		this.expressApp.listen(this.port, () => {
-			console.info(`Started ServerMockApi at http://localhost:${this.port}/`);
-		});
+		
+		if(enableHttps && keyFilePath && certFilePath) {
+			https.createServer( {
+				key: fs.readFileSync(keyFilePath),
+				cert: fs.readFileSync(certFilePath)},
+			this.expressApp
+			).listen(this.port, () => {
+				console.info(`Started ServerMockApi at https://localhost:${this.port}/`);
+			});
+		} else {
+			this.expressApp.listen(this.port, () => {
+				console.info(`Started ServerMockApi at http://localhost:${this.port}/`);
+			});
+		}
         
 	}
 
