@@ -1,6 +1,6 @@
 {
   "name": "server-mockup-api",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "To get full fake REST API with no efforts. Add/Modify API endpoint and response through JSON file.",
   "main": "./cli/bin.js",
   "bin": {
@@ -29,8 +29,8 @@
     "node": ">=8.0.0"
   },
   "scripts": {
-    "start": "nodemon src/cli/bin.ts --port=8081 --db=./mock-json/db --routes=./mock-json/routes --delayInResponse=0",
-    "start:https": "nodemon src/cli/bin.ts --port=8082 --db=./mock-json/db --routes=./mock-json/routes --delayInResponse=0 --enableHttps=true --cert=./RootCA.cert --key=./RootCA.key",
+    "start": "nodemon src/cli/bin.ts --port=8081 --db=./mock-json/db --routes=./mock-json/routes --delayInResponse=30000",
+    "start:https": "nodemon src/cli/bin.ts --port=8082 --db=./mock-json/db --routes=./mock-json/routes --delayInResponse=10000 --enableHttps=true --cert=./RootCA.cert --key=./RootCA.key",
     "build": "yarn lint && rm -rf dist/ && tsc --sourceMap false && cp package.json ./dist && cp -R mock-json ./dist && cp README.md ./dist",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src  --fix"

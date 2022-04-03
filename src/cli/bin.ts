@@ -10,5 +10,5 @@ if(!argv) {
 		if(!argv.cert) throw Error('Privide certificate file path.');
 		if(!argv.key) throw Error('Privide key file path.');
 	}
-	new ServerMockApi(argv.port || 6100, argv.db || './mock-json/db', argv.routes|| './mock-json/routes', argv.dealyInResponse || 0, argv.enableHttps || false, argv.cert || null, argv.key || null);
+	new ServerMockApi(argv.port || 6100, argv.db || './mock-json/db', argv.routes|| './mock-json/routes', argv.delayInResponse || 0, argv.enableHttps || false, argv.cert || null, argv.key || null);
 }
