@@ -39,7 +39,8 @@ It is extension on top of [JSON-SERVER](https://www.npmjs.com/package/json-serve
 
 - = 0.0.6 Support http
 - >= 0.0.7 Adeed https feature
-- >= 0.0.8 Added suppport for middleware chaining
+- >= 0.0.9-alpha-0 Added suppport for middleware chaining
+- >=0.0.9-alpha-1 enabled cors
 
 ## Demo Application
 

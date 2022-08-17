@@ -5,6 +5,7 @@ import Utils from './utils';
 import { middleware } from './middleware';
 import https from 'https';
 import fs from 'fs';
+import cors from 'cors';
 // import { middlewareA } from './../../sample-middleware';
 
 export default class ServerMockApi {
@@ -20,6 +21,9 @@ export default class ServerMockApi {
 		const mergedRoutesJson:any = new Utils().readAllFiles(this.routePath, JSON.parse('{}'));
 		const router = JsonServer.router(mergedDBJson);
 
+		this.expressApp.use(cors({
+			origin: '*'
+		}));
 		this.expressApp.use(JsonServer.rewriter(mergedRoutesJson));
 		this.expressApp.use((req, res, next) => {
 			setTimeout(next, this.delayInResponse);
